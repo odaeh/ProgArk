@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.view.Menu;
 import sheep.game.Game; 
 
-public class SpriteGame extends Activity {
+public class PingPongController extends Activity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class SpriteGame extends Activity {
         // create game
         Game game = new Game(this, null); 
         
-        game.pushState(PingPongState.getInstance()); 
+        game.pushState(new PingPongView()); 
         
         // view game
         setContentView(game); 
