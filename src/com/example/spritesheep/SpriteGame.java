@@ -17,11 +17,6 @@ public class SpriteGame extends Activity {
         // create game
         Game game = new Game(this, null); 
         
-       // Kommenter ut den staten som skal kjøres
-       //game.pushState(new TitleScreen()); // TASK 1
-       //game.pushState(new TitleScreen2()); // TASK 2
-      // game.pushState(new TitleScreen3()); // TASK 3
-      // game.pushState(new PingPongState()); // TASK 4
         game.pushState(PingPongState.getInstance()); 
         
         // view game
