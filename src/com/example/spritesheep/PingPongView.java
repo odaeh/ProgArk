@@ -3,10 +3,11 @@ package com.example.spritesheep;
 import sheep.game.Sprite;
 import sheep.game.State;
 import sheep.graphics.Font;
-import sheep.graphics.Image;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Debug;
+import android.util.Log;
 import android.view.MotionEvent;
 
 public class PingPongView extends State {
@@ -47,6 +48,7 @@ public class PingPongView extends State {
 		ball.draw(canvas);
 		canvas.drawText("" + pointsUp, 15, 310 , pointsUpText); 
 		canvas.drawText("" + pointsDown, 15, 460 , pointsDownText); 
+		
 	}
 	
 	
@@ -95,31 +97,22 @@ public class PingPongView extends State {
 		
 		// trykker til høyre oppe
 		if(x > 232 && y < 364){
-			((PaddleModel) paddleUp).goRightUp(); 
+			((PaddleModel) paddleUp).goRight(); 
 		}
 		
 		// trykker til venstre oppe
 		else if (x < 232 && y < 364){
-			((PaddleModel) paddleUp).goLeftUp(); 
+			((PaddleModel) paddleUp).goLeft(); 
 		}
 		
 		// trykker til høyre nede
 		if(x > 232 && y > 364){
-			if(paddleDown.getSpeed().getX() > 0){
-			paddleDown.setSpeed(paddleDown.getSpeed().getX(), 0); 
-			}
-			else{
-				paddleDown.setSpeed(-paddleDown.getSpeed().getX(), 0); 
-			}
+			((PaddleModel) paddleDown).goRight();
 		}
 		// trykker til venstre nede
 		else if (x < 232 && y > 364){
-			if(paddleDown.getSpeed().getX() > 0 ){
-				paddleDown.setSpeed(-paddleDown.getSpeed().getX(), 0);
-			}
-			else{
-				paddleDown.setSpeed(paddleDown.getSpeed().getX(), 0); 
-			}
+			((PaddleModel) paddleDown).goLeft();
+
 		}
 		return true; 
 	}

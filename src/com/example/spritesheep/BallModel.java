@@ -8,7 +8,6 @@ public class BallModel extends Sprite {
 
 	public BallModel(){
 		super(ballImage);
-
 	}
 
 	@Override
@@ -21,7 +20,6 @@ public class BallModel extends Sprite {
 		if (this.getX() > 462){
 			this.setSpeed(-this.getSpeed().getX(), this.getSpeed().getY()); 
 		}
-		this.update(dt);
 	}
 
 }

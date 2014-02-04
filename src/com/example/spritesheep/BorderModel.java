@@ -9,5 +9,4 @@ public class BorderModel extends Sprite {
 	public BorderModel(){
 		super(borderImage); 
 	}
-	
 }

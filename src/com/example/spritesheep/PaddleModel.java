@@ -20,11 +20,9 @@ public class PaddleModel extends Sprite{
 		if (this.getX() > 404){
 			this.setSpeed(-this.getSpeed().getX(), 0);
 		}
-
-		this.update(dt);
 	}
 	
-	public void goRightUp(){
+	public void goRight(){
 		if(this.getSpeed().getX() > 0){
 			this.setSpeed(this.getSpeed().getX(), 0); 
 			}
@@ -32,7 +30,7 @@ public class PaddleModel extends Sprite{
 				this.setSpeed(-this.getSpeed().getX(), 0); 
 			}
 	}
-	public void goLeftUp(){
+	public void goLeft(){
 		if(this.getSpeed().getX() > 0 ){
 			this.setSpeed(-this.getSpeed().getX(), 0);
 		}
@@ -40,4 +38,6 @@ public class PaddleModel extends Sprite{
 			this.setSpeed(this.getSpeed().getX(), 0); 
 		}
 	}
+	
+	
 }
