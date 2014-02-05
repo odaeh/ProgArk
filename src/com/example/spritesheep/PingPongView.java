@@ -6,8 +6,6 @@ import sheep.graphics.Font;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.os.Debug;
-import android.util.Log;
 import android.view.MotionEvent;
 
 public class PingPongView extends State {
@@ -48,7 +46,6 @@ public class PingPongView extends State {
 		ball.draw(canvas);
 		canvas.drawText("" + pointsUp, 15, 310 , pointsUpText); 
 		canvas.drawText("" + pointsDown, 15, 460 , pointsDownText); 
-		
 	}
 	
 	
@@ -71,12 +68,10 @@ public class PingPongView extends State {
 			UpdateUpScore(); 
 		}
 		
-		
 		ball.update(dt);
 		paddleDown.update(dt); 
 		paddleUp.update(dt); 
-		border.update(dt); 	
-		
+		border.update(dt); 		
 	}
 	
 	public void WhenCollides(Sprite ball, Sprite paddle){
