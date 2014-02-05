@@ -20,6 +20,7 @@ public class PaddleModel extends Sprite{
 		if (this.getX() > 404){
 			this.setSpeed(-this.getSpeed().getX(), 0);
 		}
+		super.update(dt); 
 	}
 	
 	public void goRight(){

@@ -20,6 +20,7 @@ public class BallModel extends Sprite {
 		if (this.getX() > 462){
 			this.setSpeed(-this.getSpeed().getX(), this.getSpeed().getY()); 
 		}
+		super.update(dt); 
 	}
 
 }
